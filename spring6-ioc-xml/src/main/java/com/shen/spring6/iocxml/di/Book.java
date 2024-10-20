@@ -3,12 +3,22 @@ package com.shen.spring6.iocxml.di;
 public class Book {
     private String bname;
     private String author;
+    private String other;
 
     public Book() {}
 
-    public Book(String bname, String author) {
+    public Book(String bname, String author, String other) {
         this.bname = bname;
         this.author = author;
+        this.other = other;
+    }
+
+    public String getOther() {
+        return other;
+    }
+
+    public void setOther(String other) {
+        this.other = other;
     }
 
     public String getBname() {
@@ -32,6 +42,7 @@ public class Book {
         return "Book{" +
                 "bname='" + bname + '\'' +
                 ", author='" + author + '\'' +
+                ", other='" + other + '\'' +
                 '}';
     }
 

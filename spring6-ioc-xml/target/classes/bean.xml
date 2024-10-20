@@ -9,10 +9,35 @@
     <bean id="book" class="com.shen.spring6.iocxml.di.Book">
         <property name="bname" value="java"></property>
         <property name="author" value="shen"></property>
+        <property name="other">
+            <null/>
+        </property>
     </bean>
 
     <bean id="bookCon" class="com.shen.spring6.iocxml.di.Book">
         <constructor-arg name="bname" value="java"></constructor-arg>
         <constructor-arg name="author" value="shen"></constructor-arg>
+        <constructor-arg name="other">
+            <null/>
+        </constructor-arg>
+    </bean>
+
+
+
+    <bean id="dept" class="com.shen.spring6.iocxml.ditest.Dept">
+        <property name="dname" value="js"></property>
+    </bean>
+
+    <bean id="emp" class="com.shen.spring6.iocxml.ditest.Emp">
+        <property name="ename" value="shen"></property>
+        <property name="age" value="26"></property>
+        <property name="dept" ref="dept"></property>
+    </bean>
+
+    <bean id="emp3" class="com.shen.spring6.iocxml.ditest.Emp">
+        <property name="ename" value="shen"></property>
+        <property name="age" value="26"></property>
+        <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="测试"></property>
     </bean>
 </beans>
